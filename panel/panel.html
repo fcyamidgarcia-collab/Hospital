@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Hospital Vida | Panel Administrativo</title>
+
+    <!-- FUENTE -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- ICONOS -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="panel.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     CAPA PARA MENÚ MÓVIL
+========================================================= -->
+
+<div
+    class="capa-menu"
+    id="capaMenu"
+></div>
+
+
+
+<!-- =========================================================
+     APLICACIÓN
+========================================================= -->
+
+<div class="aplicacion">
+
+
+    <!-- =====================================================
+         BARRA LATERAL
+    ====================================================== -->
+
+    <aside
+        class="barra-lateral"
+        id="barraLateral"
+    >
+
+
+        <!-- LOGO -->
+
+        <div class="encabezado-lateral">
+
+            <a
+                href="#"
+                class="marca-hospital"
+                data-vista="sobre-nosotros"
+            >
+
+                <img
+                    src="imagenes/logo.png"
+                    alt="Logo Hospital Vida"
+                >
+
+                <div>
+
+                    <span>HOSPITAL</span>
+
+                    <strong>VIDA</strong>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- MENÚ -->
+
+        <nav class="menu-lateral">
+
+            <p class="titulo-menu">
+                MENÚ PRINCIPAL
+            </p>
+
+
+            <button
+                class="elemento-menu"
+                data-vista="dashboard"
+            >
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </button>
+
+
+            <button
+                class="elemento-menu"
+                data-vista="pacientes"
+            >
+                <i class="fa-solid fa-user-group"></i>
+                <span>Pacientes</span>
+            </button>
+
+
+            <button
+                class="elemento-menu"
+                data-vista="citas"
+            >
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Citas</span>
+            </button>
+
+
+            <button
+                class="elemento-menu"
+                data-vista="medicos"
+            >
+                <i class="fa-solid fa-user-doctor"></i>
+                <span>Médicos</span>
+            </button>
+
+
+            <button
+                class="elemento-menu"
+                data-vista="servicios"
+            >
+                <i class="fa-solid fa-building"></i>
+                <span>Servicios</span>
+            </button>
+
+
+            <button
+                class="elemento-menu"
+                data-vista="facturacion"
+            >
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <span>Facturación</span>
+            </button>
+
+
+            <button
+                class="elemento-menu"
+                data-vista="historias"
+            >
+                <i class="fa-solid fa-file-medical"></i>
+                <span>Historia Clínica</span>
+            </button>
+
+
+            <button
+                class="elemento-menu"
+                data-vista="reportes"
+            >
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Reportes</span>
+            </button>
+
+
+            <button
+                class="elemento-menu"
+                data-vista="inventario"
+            >
+                <i class="fa-solid fa-boxes-stacked"></i>
+                <span>Inventario</span>
+            </button>
+
+
+            <button
+                class="elemento-menu"
+                data-vista="usuarios"
+            >
+                <i class="fa-solid fa-users"></i>
+                <span>Usuarios</span>
+            </button>
+
+
+            <p class="titulo-menu separacion-menu">
+                SISTEMA
+            </p>
+
+
+            <button
+                class="elemento-menu activo"
+                data-vista="sobre-nosotros"
+            >
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Sobre Nosotros</span>
+            </button>
+
+
+            <button
+                class="elemento-menu"
+                data-vista="configuracion"
+            >
+                <i class="fa-solid fa-gear"></i>
+                <span>Configuración</span>
+            </button>
+
+        </nav>
+
+
+
+        <!-- PERFIL -->
+
+        <div class="perfil-lateral">
+
+            <img
+                src="imagenes/doctor,mano.jpg"
+                alt="Dr. Juan Pérez"
+            >
+
+            <div>
+
+                <strong>
+                    Dr. Juan Pérez
+                </strong>
+
+                <span>
+                    Administrador
+                </span>
+
+            </div>
+
+
+            <button
+                id="botonPerfilLateral"
+                aria-label="Abrir perfil"
+            >
+
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         CONTENIDO
+    ====================================================== -->
+
+    <main class="contenido-principal">
+
+
+        <!-- =================================================
+             BARRA SUPERIOR
+        ================================================== -->
+
+        <header class="barra-superior">
+
+
+            <div class="zona-titulo">
+
+                <button
+                    class="boton-menu"
+                    id="botonMenu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div>
+
+                    <h1 id="tituloVista">
+                        Sobre Nosotros
+                    </h1>
+
+                    <p id="subtituloVista">
+                        Conoce quiénes somos y nuestra historia
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="acciones-superiores">
+
+
+                <!-- BUSCADOR -->
+
+                <label class="buscador">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="search"
+                        id="campoBusqueda"
+                        placeholder="Buscar..."
+                    >
+
+                    <kbd>
+                        Ctrl K
+                    </kbd>
+
+                </label>
+
+
+
+                <!-- TEMA -->
+
+                <button
+                    class="boton-icono"
+                    id="botonTema"
+                    title="Cambiar tema"
+                >
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+
+
+                <!-- NOTIFICACIONES -->
+
+                <button
+                    class="boton-icono notificaciones"
+                    id="botonNotificaciones"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span id="contadorNotificaciones">
+                        3
+                    </span>
+
+                </button>
+
+
+                <span class="separador"></span>
+
+
+
+                <!-- PERFIL -->
+
+                <button
+                    class="avatar-superior"
+                    id="botonAvatar"
+                >
+
+                    <img
+                        src="imagenes/doctor,mano.jpg"
+                        alt="Perfil"
+                    >
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             CONTENEDOR DE VISTAS
+        ================================================== -->
+
+        <section
+            class="contenedor-vistas"
+            id="contenedorVistas"
+        >
+
+
+            <!-- =================================================
+                 SOBRE NOSOTROS
+            ================================================== -->
+
+            <div
+                class="vista activa"
+                id="vista-sobre-nosotros"
+            >
+
+
+                <div class="cabecera-pagina">
+
+                    <div>
+
+                        <span class="etiqueta">
+
+                            <i class="fa-solid fa-heart-pulse"></i>
+
+                            Hospital Vida
+
+                        </span>
+
+                        <h2>
+                            Sobre Nosotros
+                        </h2>
+
+                        <p>
+                            Conoce quiénes somos y nuestra historia.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="boton secundario"
+                        id="botonEditarInstitucion"
+                    >
+
+                        <i class="fa-solid fa-pen"></i>
+
+                        Editar información
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- HERO -->
+
+                <section class="tarjeta hero-nosotros">
+
+
+                    <div class="hero-texto">
+
+                        <span class="etiqueta suave">
+
+                            <i class="fa-solid fa-hospital"></i>
+
+                            Nuestra historia
+
+                        </span>
+
+
+                        <h2>
+
+                            Cuidamos tu salud,
+
+                            <span>
+                                protegemos tu vida.
+                            </span>
+
+                        </h2>
+
+
+                        <p id="textoInstitucion">
+
+                            Hospital Vida nació con el propósito de brindar
+                            atención médica humana, segura y de alta calidad.
+                            Nuestro equipo combina experiencia, tecnología
+                            y empatía para acompañar a cada paciente.
+
+                        </p>
+
+
+                        <div class="hero-botones">
+
+                            <button
+                                class="boton primario"
+                                id="botonHistoria"
+                            >
+
+                                <i class="fa-solid fa-book-open"></i>
+
+                                Nuestra historia
+
+                            </button>
+
+
+                            <button
+                                class="boton secundario"
+                                data-vista="citas"
+                            >
+
+                                <i class="fa-solid fa-calendar-check"></i>
+
+                                Ver citas
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="hero-imagen">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1000&q=85"
+                            alt="Hospital moderno"
+                        >
+
+
+                        <div class="insignia-flotante">
+
+                            <i class="fa-solid fa-heart"></i>
+
+                            <div>
+
+                                <strong>
+                                    +25 años
+                                </strong>
+
+                                <span>
+                                    cuidando vidas
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- ESTADÍSTICAS -->
+
+                <section class="rejilla-estadisticas">
+
+
+                    <article class="tarjeta mini-estadistica">
+
+                        <div class="icono azul">
+
+                            <i class="fa-solid fa-calendar-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Experiencia
+                            </span>
+
+                            <strong data-contador="25">
+                                0
+                            </strong>
+
+                            <small>
+                                Años de servicio
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="tarjeta mini-estadistica">
+
+                        <div class="icono verde">
+
+                            <i class="fa-solid fa-user-doctor"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Profesionales
+                            </span>
+
+                            <strong data-contador="120">
+                                0
+                            </strong>
+
+                            <small>
+                                Especialistas
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="tarjeta mini-estadistica">
+
+                        <div class="icono morado">
+
+                            <i class="fa-solid fa-users"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Pacientes
+                            </span>
+
+                            <strong data-contador="15000">
+                                0
+                            </strong>
+
+                            <small>
+                                Personas atendidas
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="tarjeta mini-estadistica">
+
+                        <div class="icono naranja">
+
+                            <i class="fa-solid fa-award"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Satisfacción
+                            </span>
+
+                            <strong data-contador="98">
+                                0%
+                            </strong>
+
+                            <small>
+                                Valoración general
+                            </small>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+
+                <!-- MISIÓN / VISIÓN -->
+
+                <section class="rejilla-dos">
+
+
+                    <article class="tarjeta bloque-info">
+
+                        <div class="cabecera-bloque">
+
+                            <div class="icono grande azul">
+
+                                <i class="fa-solid fa-bullseye"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Nuestro propósito
+                                </span>
+
+                                <h3>
+                                    Misión
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+                        <p>
+
+                            Brindar servicios de salud integrales,
+                            oportunos y seguros, centrados en las
+                            necesidades de nuestros pacientes y sus familias.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="tarjeta bloque-info">
+
+                        <div class="cabecera-bloque">
+
+                            <div class="icono grande verde">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Hacia dónde vamos
+                                </span>
+
+                                <h3>
+                                    Visión
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+                        <p>
+
+                            Ser una institución reconocida por su
+                            excelencia médica, innovación tecnológica
+                            y calidad humana.
+
+                        </p>
+
+                    </article>
+
+                </section>
+
+
+
+                <!-- VALORES -->
+
+                <section class="tarjeta bloque">
+
+                    <div class="cabecera-seccion">
+
+                        <div>
+
+                            <span class="etiqueta">
+
+                                <i class="fa-solid fa-heart"></i>
+
+                                Lo que nos representa
+
+                            </span>
+
+                            <h2>
+                                Nuestros valores
+                            </h2>
+
+                            <p>
+                                Principios que guían cada decisión.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="rejilla-valores">
+
+
+                        <article class="tarjeta-valor">
+
+                            <div class="icono grande azul">
+
+                                <i class="fa-solid fa-hand-holding-heart"></i>
+
+                            </div>
+
+                            <h3>
+                                Humanidad
+                            </h3>
+
+                            <p>
+                                Tratamos a cada persona con respeto,
+                                empatía y dignidad.
+                            </p>
+
+                        </article>
+
+
+
+                        <article class="tarjeta-valor">
+
+                            <div class="icono grande verde">
+
+                                <i class="fa-solid fa-shield-heart"></i>
+
+                            </div>
+
+                            <h3>
+                                Seguridad
+                            </h3>
+
+                            <p>
+                                Priorizamos la seguridad del paciente.
+                            </p>
+
+                        </article>
+
+
+
+                        <article class="tarjeta-valor">
+
+                            <div class="icono grande morado">
+
+                                <i class="fa-solid fa-star"></i>
+
+                            </div>
+
+                            <h3>
+                                Excelencia
+                            </h3>
+
+                            <p>
+                                Buscamos mejorar continuamente.
+                            </p>
+
+                        </article>
+
+
+
+                        <article class="tarjeta-valor">
+
+                            <div class="icono grande naranja">
+
+                                <i class="fa-solid fa-lightbulb"></i>
+
+                            </div>
+
+                            <h3>
+                                Innovación
+                            </h3>
+
+                            <p>
+                                Usamos tecnología para transformar
+                                la atención.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- EQUIPO -->
+
+                <section class="tarjeta equipo">
+
+                    <div class="cabecera-seccion">
+
+                        <div>
+
+                            <span class="etiqueta">
+
+                                <i class="fa-solid fa-user-doctor"></i>
+
+                                Nuestro equipo
+
+                            </span>
+
+                            <h2>
+                                Profesionales que hacen la diferencia
+                            </h2>
+
+                        </div>
+
+
+                        <button
+                            class="boton secundario"
+                            data-vista="medicos"
+                        >
+
+                            Ver todos
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="rejilla-equipo">
+
+
+                        <article class="profesional">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80"
+                                alt="Médico"
+                            >
+
+                            <div>
+
+                                <h3>
+                                    Dr. Juan Pérez
+                                </h3>
+
+                                <span>
+                                    Director Médico
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <article class="profesional">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80"
+                                alt="Médica"
+                            >
+
+                            <div>
+
+                                <h3>
+                                    Dra. Laura Gómez
+                                </h3>
+
+                                <span>
+                                    Medicina Interna
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <article class="profesional">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80"
+                                alt="Médico"
+                            >
+
+                            <div>
+
+                                <h3>
+                                    Dr. Carlos Ramírez
+                                </h3>
+
+                                <span>
+                                    Cardiología
+                                </span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- CONTACTO -->
+
+                <section class="llamada-accion">
+
+                    <div class="icono-contacto">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Estamos para ayudarte
+                        </span>
+
+                        <h2>
+                            Tu salud es nuestra prioridad
+                        </h2>
+
+                        <p>
+                            Comunícate con nuestro equipo.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="boton blanco"
+                        id="botonContacto"
+                    >
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        Contactarnos
+
+                    </button>
+
+                </section>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 VISTAS DINÁMICAS
+            ================================================== -->
+
+            <div
+                class="vista"
+                id="vista-dashboard"
+            ></div>
+
+
+            <div
+                class="vista"
+                id="vista-pacientes"
+            ></div>
+
+
+            <div
+                class="vista"
+                id="vista-citas"
+            ></div>
+
+
+            <div
+                class="vista"
+                id="vista-medicos"
+            ></div>
+
+
+            <div
+                class="vista"
+                id="vista-servicios"
+            ></div>
+
+
+            <div
+                class="vista"
+                id="vista-facturacion"
+            ></div>
+
+
+            <div
+                class="vista"
+                id="vista-historias"
+            ></div>
+
+
+            <div
+                class="vista"
+                id="vista-reportes"
+            ></div>
+
+
+            <div
+                class="vista"
+                id="vista-inventario"
+            ></div>
+
+
+            <div
+                class="vista"
+                id="vista-usuarios"
+            ></div>
+
+
+            <div
+                class="vista"
+                id="vista-configuracion"
+            ></div>
+
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer class="pie-pagina">
+
+            <span>
+                © 2026 Hospital Vida
+            </span>
+
+            <div>
+
+                <button data-vista="configuracion">
+                    Configuración
+                </button>
+
+                <button id="botonAyuda">
+                    Ayuda
+                </button>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================================================
+     MODAL
+========================================================= -->
+
+<div
+    class="fondo-modal"
+    id="fondoModal"
+>
+
+    <div class="modal">
+
+        <div class="encabezado-modal">
+
+            <div>
+
+                <span id="subtituloModal">
+                    Formulario
+                </span>
+
+                <h2 id="tituloModal">
+                    Nuevo registro
+                </h2>
+
+            </div>
+
+
+            <button
+                class="cerrar-modal"
+                id="cerrarModal"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <form id="formularioModal"></form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     NOTIFICACIONES
+========================================================= -->
+
+<div
+    class="painel-notificaciones"
+    id="painelNotificaciones"
+>
+
+    <div class="encabezado-painel">
+
+        <h3>
+            Notificaciones
+        </h3>
+
+        <button id="cerrarNotificaciones">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <div id="listaNotificaciones"></div>
+
+
+    <button
+        class="boton texto"
+        id="marcarNotificaciones"
+    >
+
+        Marcar todas como leídas
+
+    </button>
+
+</div>
+
+
+
+<!-- =========================================================
+     PERFIL
+========================================================= -->
+
+<div
+    class="menu-perfil"
+    id="menuPerfil"
+>
+
+    <div class="perfil-resumen">
+
+        <img
+            src="https://via.placeholder.com/80x80.png?text=JP"
+            alt="Perfil"
+        >
+
+        <div>
+
+            <strong>
+                Dr. Juan Pérez
+            </strong>
+
+            <span>
+                Administrador
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <button data-vista="configuracion">
+
+        <i class="fa-solid fa-gear"></i>
+
+        Configuración
+
+    </button>
+
+
+    <button id="botonCerrarSesion">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        Cerrar sesión
+
+    </button>
+
+</div>
+
+
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div
+    class="toast"
+    id="toast"
+>
+
+    <div class="toast-icon">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+    </div>
+
+
+    <div>
+
+        <strong id="toastTitulo">
+            Listo
+        </strong>
+
+        <p id="toastTexto">
+            Operación realizada.
+        </p>
+
+    </div>
+
+
+    <button id="cerrarToast">
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+</div>
+
+
+
+<!-- =========================================================
+     CONFIRMACIÓN
+========================================================= -->
+
+<div
+    class="fondo-confirmacion"
+    id="fondoConfirmacion"
+>
+
+    <div class="confirmacion">
+
+        <div class="icono-confirmacion">
+
+            <i class="fa-solid fa-triangle-exclamation"></i>
+
+        </div>
+
+
+        <h3 id="tituloConfirmacion">
+            ¿Estás seguro?
+        </h3>
+
+
+        <p id="textoConfirmacion">
+            Esta acción no se puede deshacer.
+        </p>
+
+
+        <div>
+
+            <button
+                class="boton secundario"
+                id="cancelarConfirmacion"
+            >
+                Cancelar
+            </button>
+
+
+            <button
+                class="boton peligro"
+                id="aceptarConfirmacion"
+            >
+                Continuar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="panel.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+/* ===================================
+   VARIABLES GLOBALES
+=================================== */
+:root {
+  --azul-oscuro: #0f2a4a;
+  --azul-principal: #1f4e8c;
+  --azul-claro: #eaf1fb;
+  --azul-medio: #dce8fa;
+  --gris-texto: #5b6b7c;
+  --blanco: #ffffff;
+  --fuente-principal: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ===================================
+   BASE
+=================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  color: var(--azul-oscuro);
+  background-color: var(--blanco);
+}
+
+.seccion-sobre-nosotros {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===================================
+   INTRODUCCIÓN (texto + imagen)
+=================================== */
+.contenedor-introduccion {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.columna-texto {
+  flex: 1 1 400px;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titulo-principal {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--azul-oscuro);
+  margin-bottom: 20px;
+}
+
+.parrafo-introduccion {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--gris-texto);
+  max-width: 420px;
+}
+
+.columna-imagen {
+  flex: 1 1 400px;
+  min-height: 320px;
+}
+
+.imagen-introduccion {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===================================
+   ESTADÍSTICAS
+=================================== */
+.contenedor-estadisticas {
+  background-color: var(--azul-claro);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 35px 20px;
+  gap: 20px;
+}
+
+.tarjeta-estadistica {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icono-estadistica {
+  font-size: 1.8rem;
+  color: var(--azul-principal);
+}
+
+.texto-estadistica {
+  display: flex;
+  flex-direction: column;
+}
+
+.numero-estadistica {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--azul-oscuro);
+}
+
+.etiqueta-estadistica {
+  font-size: 0.85rem;
+  color: var(--gris-texto);
+}
+
+/* ===================================
+   MISIÓN Y VISIÓN
+=================================== */
+.contenedor-mision-vision {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 50px;
+  gap: 40px;
+}
+
+.tarjeta-mision,
+.tarjeta-vision {
+  flex: 1 1 350px;
+}
+
+.subtitulo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--azul-oscuro);
+  margin-bottom: 16px;
+}
+
+.parrafo-mision-vision {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--gris-texto);
+  max-width: 420px;
+}
+
+/* ===================================
+   VALORES
+=================================== */
+.contenedor-valores {
+  background-color: var(--azul-medio);
+  padding: 50px 20px 60px;
+  text-align: center;
+}
+
+.titulo-valores {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--azul-oscuro);
+  margin-bottom: 40px;
+}
+
+.lista-valores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.tarjeta-valor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100px;
+}
+
+.circulo-icono {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--blanco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(15, 42, 74, 0.08);
+}
+
+.icono-valor {
+  font-size: 1.5rem;
+  color: var(--azul-principal);
+}
+
+.nombre-valor {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--azul-oscuro);
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+@media (max-width: 768px) {
+  .contenedor-introduccion {
+    flex-direction: column;
+  }
+
+  .columna-texto {
+    padding: 40px 25px;
+    text-align: left;
+  }
+
+  .contenedor-mision-vision {
+    padding: 40px 25px;
+  }
+
+  .lista-valores {
+    gap: 30px;
+  }
+}
