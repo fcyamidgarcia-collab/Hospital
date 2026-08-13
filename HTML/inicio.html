@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Vida</title>
+<link rel="stylesheet" href="../CSS/inicio.css">
+</head>
+<body>
+
+<!-- Barra de navegación -->
+<header class="barra-navegacion">
+  <div class="marca">
+    <img src="../IMAGENES/551dfb3f-2660-4a41-b8b0-734d47544f52.png" alt="Logo Hospital Vida">
+  </div>
+
+  <ul class="enlaces-menu" id="enlacesMenu">
+        <li><a href="inicio.html" class="activo">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="Especialidades.html">Especialidades</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="medicos.html">Médicos</a></li>
+        <li><a href="sesionCita.html">Citas</a></li>
+        <li><a href="resultados.html">Resultados</a></li>
+        <li><a href="contacto.html" >Contacto</a></li>
+  </ul>
+
+  <div class="acciones">
+    <button class="boton-urgencias" onclick="window.location.href='sesion.html'">Iniciar sesion</button>
+    <button class="menu-hamburguesa" id="menuHamburguesa" onclick="mostrarMenu()" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="presentacion">
+  <div class="presentacion-contenedor">
+    <div class="presentacion-texto">
+      <h1>Tu salud<br>es nuestra<br>prioridad</h1>
+      <p>Brindamos atención médica de calidad con calidez humana y tecnología avanzada.</p>
+      <div class="presentacion-botones">
+        <button class="boton-primario" onclick="window.location.href='AgendarCita.html'">Agendar cita</button>
+        <button class="boton-secundario">Conocer más</button>
+      </div>
+    </div>
+
+    <div class="presentacion-imagen">
+      <div class="caja-edificio">
+        <img src="../IMAGENES/image-0-b62c73036fd9e70aef5bf49f72da2e6b.jpeg" alt="Imagen del hospital">
+      </div>
+    </div>
+  </div>
+
+  <!-- tarjetas de servicios -->
+  <div class="tarjetas-servicios">
+    <div class="tarjeta">
+      <div class="icono-tarjeta icono-rojo">
+        <span>❤️</span>
+      </div>
+      <h3>Urgencias 24/7</h3>
+      <p>Atención inmediata las 24 horas del día.</p>
+    </div>
+
+    <div class="tarjeta">
+      <div class="icono-tarjeta icono-azul">
+        <span>📅</span>
+      </div>
+      <h3>Citas en línea</h3>
+      <p>Agenda tu cita de forma rápida y fácil.</p>
+    </div>
+
+    <div class="tarjeta">
+      <div class="icono-tarjeta icono-azul">
+        <span>🩺</span>
+      </div>
+      <h3>Especialistas</h3>
+      <p>Contamos con los mejores profesionales.</p>
+    </div>
+
+    <div class="tarjeta">
+      <div class="icono-tarjeta icono-azul">
+        <span>📋</span>
+      </div>
+      <h3>Resultados</h3>
+      <p>Consulta tus resultados de laboratorio en línea.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Pie de página -->
+<footer class="pie-pagina">
+  <div class="pie-superior">
+
+    <div class="columna">
+      <div class="marca">
+        <img src="../IMAGENES/551dfb3f-2660-4a41-b8b0-734d47544f52.png" alt="Logo Hospital Vida">
+      </div>
+      <p>Brindamos atención médica de calidad con calidez humana y tecnología avanzada, cuidando de ti y tu familia todos los días del año.</p>
+      <div class="redes-sociales">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">📷</a>
+        <a href="#" aria-label="Twitter/X">✕</a>
+      </div>
+    </div>
+
+    <div class="columna">
+      <h4>Enlaces rápidos</h4>
+      <ul class="enlaces-pie">
+        <li><a href="inicio.html" class="activo">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="Especialidades.html">Especialidades</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="medicos.html">Médicos</a></li>
+        <li><a href="AgendarCita.html">Citas</a></li>
+        <li><a href="contacto.html" >Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="columna">
+      <h4>Especialidades</h4>
+      <ul class="enlaces-pie">
+        <li><a href="#">Cardiología</a></li>
+        <li><a href="#">Pediatría</a></li>
+        <li><a href="#">Ginecología</a></li>
+        <li><a href="#">Traumatología</a></li>
+        <li><a href="#">Neurología</a></li>
+      </ul>
+    </div>
+
+    <div class="columna">
+      <h4>Contacto</h4>
+      <ul class="contacto">
+        <li>
+          <span>📍</span>
+          <span>Av. Principal 123, Bogotá, Colombia</span>
+        </li>
+        <li>
+          <span>📞</span>
+          <span><strong>Urgencias 24/7</strong>(+57) 601 234 5678</span>
+        </li>
+        <li>
+          <span>✉️</span>
+          <span>contacto@hospitalvida.com</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="pie-inferior">
+    <div class="pie-inferior-contenedor">
+      <p>© <span id="anioActual"></span> Hospital Vida. Todos los derechos reservados.</p>
+      <ul class="enlaces-legales">
+        <li><a href="#">Aviso de privacidad</a></li>
+        <li><a href="#">Términos de uso</a></li>
+        <li><a href="#">Mapa del sitio</a></li>
+      </ul>
+    </div>
+  </div>
+
+</footer>
+
+<button class="boton-arriba" id="botonArriba" onclick="irArriba()" aria-label="Volver arriba">↑</button>
+<script src="../JAVA/inicio.js"></script>
+
+</body>
+</html>

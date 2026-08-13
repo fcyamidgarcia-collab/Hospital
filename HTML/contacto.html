@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Vida</title>
+    <link rel="stylesheet" href="../CSS/estilos.css" />
+  </head>
+
+  <body>
+    <!-- BARRA DE NAVEGACIÓN  -->
+    <nav class="barra-navegacion">
+      <div class="marca">
+        <img src="../IMAGENES/logo1.png" alt="Logo del Hospital Vida" class="logo" />
+      </div>
+
+      <ul class="enlaces-menu" id="enlacesMenu">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="Especialidades.html">Especialidades</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="medicos.html">Médicos</a></li>
+        <li><a href="AgendarCita.html">Citas</a></li>
+        <li><a href="resultados.html">Resultados</a></li>
+        <li><a href="contacto.html" class="activo">Contacto</a></li>
+      </ul>
+
+      <div class="acciones">
+        <button class="boton-urgencias" onclick="window.location.href='sesion.html'">Iniciar sesion</button>
+        <button
+          class="menu-hamburguesa"
+          id="menuHamburguesa"
+          onclick="mostrarMenu()"
+          aria-label="Abrir menú"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- CONTENIDO -->
+    <main>
+      <section class="seccion-contacto">
+        <div class="contenedor">
+          <div class="encabezado-seccion">
+            <h1>Contáctanos</h1>
+            <p>Estamos aquí para ayudarte.</p>
+          </div>
+
+          <div class="contenido-contacto">
+            <!-- INFORMACIÓN -->
+            <div class="informacion-contacto">
+              <div class="dato-contacto">
+                <div class="icono-contacto">📍</div>
+                <div>
+                  <h3>Dirección</h3>
+                  <p>
+                    Calle 123 #45-67<br />
+                    Ciudad, País
+                  </p>
+                </div>
+              </div>
+
+              <div class="dato-contacto">
+                <div class="icono-contacto">☎</div>
+                <div>
+                  <h3>Teléfono</h3>
+                  <p>
+                    (601) 123 4567<br />
+                    300 123 4567
+                  </p>
+                </div>
+              </div>
+
+              <div class="dato-contacto">
+                <div class="icono-contacto">✉</div>
+                <div>
+                  <h3>Correo electrónico</h3>
+                  <p>contacto@hospitalvida.com</p>
+                </div>
+              </div>
+
+              <div class="dato-contacto">
+                <div class="icono-contacto">◷</div>
+                <div>
+                  <h3>Horario de atención</h3>
+                  <p>
+                    Consultas externas:<br />
+                    Lun - Vie · 7:00 AM - 5:00 PM
+                  </p>
+                  <p>
+                    <strong>Urgencias: 24 horas</strong>
+                  </p>
+                </div>
+              </div>
+
+              <!-- MAPA -->
+              <div class="mapa">
+                <iframe
+                  src="https://www.google.com/maps?q=Bogota,Colombia&output=embed"
+                  loading="lazy"
+                >
+                </iframe>
+              </div>
+            </div>
+
+            <!-- FORMULARIO -->
+            <div class="formulario-contenedor">
+              <h2>Envíanos un mensaje</h2>
+              <form id="formularioContacto" class="formulario-contacto">
+                <div class="grupo-formulario">
+                  <label for="nombre"> Nombre completo </label>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Nombre completo"
+                    required
+                  />
+                </div>
+
+                <div class="grupo-formulario">
+                  <label for="correo"> Correo electrónico </label>
+                  <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="Correo electrónico"
+                    required
+                  />
+                </div>
+
+                <div class="grupo-formulario">
+                  <label for="telefono"> Teléfono </label>
+                  <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    placeholder="Teléfono"
+                    required
+                  />
+                </div>
+
+                <div class="grupo-formulario">
+                  <label for="mensaje"> Mensaje </label>
+                  <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="6"
+                    placeholder="Escribe tu mensaje"
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="boton-enviar">
+                  Enviar mensaje
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- PIE DE PÁGINA  -->
+    <footer class="pie-pagina">
+      <div class="pie-superior">
+        <div class="columna">
+          <div class="marca">
+            <img src="../IMAGENES/logo1.png" alt="Logo del Hospital Vida" class="logo" />
+          </div>
+          <p>
+            Brindamos atención médica de calidad con calidez humana y tecnología
+            avanzada, cuidando de ti y tu familia todos los días del año.
+          </p>
+          <div class="redes-sociales">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Twitter/X">✕</a>
+          </div>
+        </div>
+
+        <div class="columna">
+          <h4>Enlaces rápidos</h4>
+          <ul class="enlaces-pie">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="Especialidades.html">Especialidades</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="medicos.html">Médicos</a></li>
+        <li><a href="AgendarCita.html" class="activo">Citas</a></li>
+        <li><a href="contacto.html" class="activo">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="columna">
+          <h4>Especialidades</h4>
+          <ul class="enlaces-pie">
+            <li><a href="#">Cardiología</a></li>
+            <li><a href="#">Pediatría</a></li>
+            <li><a href="#">Ginecología</a></li>
+            <li><a href="#">Traumatología</a></li>
+            <li><a href="#">Neurología</a></li>
+          </ul>
+        </div>
+
+        <div class="columna">
+          <h4>Contacto</h4>
+          <ul class="contacto">
+            <li>
+              <span>📍</span>
+              <span>Av. Principal 123, Bogotá, Colombia</span>
+            </li>
+            <li>
+              <span>📞</span>
+              <span><strong>Urgencias 24/7</strong>(+57) 601 234 5678</span>
+            </li>
+            <li>
+              <span>✉️</span>
+              <span>contacto@hospitalvida.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pie-inferior">
+        <div class="pie-inferior-contenedor">
+          <p>
+            © <span id="anioActual"></span> Hospital Vida. Todos los derechos
+            reservados.
+          </p>
+          <ul class="enlaces-legales">
+            <li><a href="#">Aviso de privacidad</a></li>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Mapa del sitio</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <button
+        class="boton-arriba"
+        id="botonArriba"
+        onclick="irArriba()"
+        aria-label="Volver arriba"
+      >
+        ↑
+      </button>
+    </footer>
+
+    <script src="../JAVA/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Vida — Agendar Citas</title>
+    <link rel="stylesheet" href="../CSS/AgendarCita.css" />
+  </head>
+  <body>
+    <!-- Mi Navbar uwu -->
+    <header class="barra-navegacion">
+      <div class="marca">
+        <img src="../IMAGENES/551dfb3f-2660-4a41-b8b0-734d47544f52.png" alt="Logo Hospital Vida">
+      </div>
+      <ul class="enlaces-menu" id="enlacesMenu">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="Especialidades.html">Especialidades</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="medicos.html">Médicos</a></li>
+        <li><a href="AgendarCita.html" class="activo">Citas</a></li>
+        <li><a href="resultados.html">Resultados</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="acciones">
+        <!-- Botón de cerrar sesión -->
+        <button id="boton-urgencias" class="boton-urgencias">Cerrar Sesión</button>
+        <button class="menu-hamburguesa" id="menuHamburguesa" onclick="mostrarMenu()" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- aqui va el body -->
+    <div style="height: 60px"></div>
+
+    <!-- aqui las opciones -->
+    <section class="seccion-agendar-cita">
+      <div class="contenedor-agendar">
+        <div class="encabezado-seccion">
+          <h1>Agendar Cita</h1>
+          <p>Completa el formulario para agendar tu cita médica</p>
+        </div>
+
+        <!-- Pasos de progreso: ahora controlados dinámicamente por AgendarCita.js -->
+        <div class="pasos-progreso">
+          <div class="paso" data-paso="1">
+            <div class="circulo-paso">
+              <span class="numero-paso">1</span>
+              <svg class="icono-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </div>
+            <span class="etiqueta-paso">Especialidad</span>
+          </div>
+          <div class="linea-paso"></div>
+
+          <div class="paso" data-paso="2">
+            <div class="circulo-paso">
+              <span class="numero-paso">2</span>
+              <svg class="icono-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </div>
+            <span class="etiqueta-paso">Médico</span>
+          </div>
+          <div class="linea-paso"></div>
+
+          <div class="paso" data-paso="3">
+            <div class="circulo-paso">
+              <span class="numero-paso">3</span>
+              <svg class="icono-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </div>
+            <span class="etiqueta-paso">Fecha y Hora</span>
+          </div>
+          <div class="linea-paso"></div>
+
+          <div class="paso" data-paso="4">
+            <div class="circulo-paso">
+              <span class="numero-paso">4</span>
+              <svg class="icono-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </div>
+            <span class="etiqueta-paso">Datos</span>
+          </div>
+          <div class="linea-paso"></div>
+
+          <div class="paso" data-paso="5">
+            <div class="circulo-paso">
+              <span class="numero-paso">5</span>
+              <svg class="icono-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </div>
+            <span class="etiqueta-paso">Confirmación</span>
+          </div>
+        </div>
+
+        <!-- aqui la especialidad y medico -->
+        <form class="formulario-cita" novalidate>
+          <div class="fila-formulario">
+            <div class="grupo-campo">
+              <label for="especialidad">Especialidad</label>
+              <select id="especialidad" name="especialidad">
+                <option value="">Selecciona una especialidad</option>
+                <option value="cardiologia">Cardiología</option>
+                <option value="pediatria">Pediatría</option>
+                <option value="ginecologia">Ginecología</option>
+                <option value="traumatologia">Traumatología</option>
+                <option value="neurologia">Neurología</option>
+                <option value="dermatologia">Dermatología</option>
+                <option value="oftalmologia">Oftalmología</option>
+                <option value="oncologia">Oncología</option>
+              </select>
+              <span class="mensaje-error" role="alert"></span>
+            </div>
+
+            <div class="grupo-campo">
+              <label for="medico">Médico</label>
+              <select id="medico" name="medico">
+                <option value="">Selecciona un médico</option>
+                <option value="juan-perez">Dr. Yotoko Turaja</option>
+                <option value="ana-gomez">Dra. Lago Loza</option>
+                <option value="carlos-ruiz">Dr. Jorge Nitales</option>
+              </select>
+              <span class="mensaje-error" role="alert"></span>
+            </div>
+          </div>
+
+          <!-- Aqui el de fecha y hora -->
+          <div class="fila-formulario">
+            <div class="grupo-campo">
+              <label for="fecha">Fecha</label>
+              <input type="date" id="fecha" name="fecha" />
+              <span class="mensaje-error" role="alert"></span>
+            </div>
+
+            <div class="grupo-campo">
+              <label for="hora">Hora</label>
+              <input type="time" id="hora" name="hora" />
+              <span class="mensaje-error" role="alert"></span>
+            </div>
+          </div>
+
+          <!-- He aqui los datos del paciente -->
+          <div class="titulo-subseccion">
+            <h3>Datos del Paciente</h3>
+          </div>
+
+          <div class="grupo-campo campo-completo">
+            <label for="nombre">Nombre completo</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ana María Rodríguez"
+            />
+            <span class="mensaje-error" role="alert"></span>
+          </div>
+
+          <div class="fila-formulario">
+            <div class="grupo-campo">
+              <label for="telefono">Teléfono</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="300 123 4567"
+                inputmode="numeric"
+              />
+              <span class="mensaje-error" role="alert"></span>
+            </div>
+
+            <div class="grupo-campo">
+              <label for="correo">Correo electrónico</label>
+              <input
+                type="email"
+                id="correo"
+                name="correo"
+                placeholder="ana.rodriguez@email.com"
+              />
+              <span class="mensaje-error" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="fila-formulario">
+            <div class="grupo-campo">
+              <label for="documento">Documento de identidad</label>
+              <input
+                type="text"
+                id="documento"
+                name="documento"
+                placeholder="12345678"
+                inputmode="numeric"
+              />
+              <span class="mensaje-error" role="alert"></span>
+            </div>
+
+            <div class="grupo-campo">
+              <label for="motivo">Motivo de consulta</label>
+              <input
+                type="text"
+                id="motivo"
+                name="motivo"
+                placeholder="Control cardiológico"
+              />
+              <span class="mensaje-error" role="alert"></span>
+            </div>
+          </div>
+
+          <button type="submit" class="boton-confirmar">
+            Confirmar Cita
+          </button>
+        </form>
+      </div>
+      <script src="../JAVA/AgendarCita.js"></script>
+    </section>
+
+    <!-- ===================== PIE DE PÁGINA ===================== -->
+    <footer class="pie-pagina">
+      <div class="pie-superior">
+        <div class="columna">
+          <div class="marca">
+            <img src="../IMAGENES/551dfb3f-2660-4a41-b8b0-734d47544f52.png" alt="Logo Hospital Vida">
+          </div>
+          <p>Brindamos atención médica de calidad con calidez humana y tecnología avanzada, cuidando de ti y tu familia todos los días del año.</p>
+          <div class="redes-sociales">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Twitter/X">✕</a>
+          </div>
+        </div>
+        <div class="columna">
+          <h4>Enlaces rápidos</h4>
+          <ul class="enlaces-pie">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="Especialidades.html">Especialidades</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="medicos.html">Médicos</a></li>
+        <li><a href="AgendarCita.html" class="activo">Citas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="columna">
+          <h4>Especialidades</h4>
+          <ul class="enlaces-pie">
+            <li><a href="#">Cardiología</a></li>
+            <li><a href="#">Pediatría</a></li>
+            <li><a href="#">Ginecología</a></li>
+            <li><a href="#">Traumatología</a></li>
+            <li><a href="#">Neurología</a></li>
+          </ul>
+        </div>
+        <div class="columna">
+          <h4>Contacto</h4>
+          <ul class="contacto">
+            <li>
+              <span>📍</span>
+              <span>Av. Principal 123, Bogotá, Colombia</span>
+            </li>
+            <li>
+              <span>📞</span>
+              <span><strong>Urgencias 24/7</strong>(+57) 601 234 5678</span>
+            </li>
+            <li>
+              <span>✉️</span>
+              <span>contacto@hospitalvida.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="pie-inferior">
+        <div class="pie-inferior-contenedor">
+          <p>© <span id="anioActual"></span> Hospital Vida. Todos los derechos reservados.</p>
+          <ul class="enlaces-legales">
+            <li><a href="#">Aviso de privacidad</a></li>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Mapa del sitio</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('anioActual').textContent = new Date().getFullYear();
+
+      function mostrarMenu() {
+        document.getElementById('enlacesMenu').classList.toggle('menu-abierto');
+      }
+    </script>
+  </body>
+</html>

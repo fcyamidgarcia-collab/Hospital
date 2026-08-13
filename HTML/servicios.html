@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Hospital Vida - Nuestros Servicios</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/servicios.css" />
+
+    <!-- Font Awesome para los iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+
+  <!-- Barra de navegación -->
+<header class="barra-navegacion">
+  <div class="marca">
+    <img src="../IMAGENES/551dfb3f-2660-4a41-b8b0-734d47544f52.png" alt="Logo Hospital Vida">
+  </div>
+
+  <ul class="enlaces-menu" id="enlacesMenu">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="Especialidades.html">Especialidades</a></li>
+        <li><a href="servicios.html" class="activo">Servicios</a></li>
+        <li><a href="medicos.html">Médicos</a></li>
+        <li><a href="AgendarCita.html">Citas</a></li>
+        <li><a href="resultados.html">Resultados</a></li>
+        <li><a href="contacto.html" >Contacto</a></li>
+  </ul>
+
+  <div class="acciones">
+    <button class="boton-urgencias" onclick="window.location.href='sesion.html'">Iniciar sesion</button>
+    <button class="menu-hamburguesa" id="menuHamburguesa" onclick="mostrarMenu()" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+    <main class="contenido-principal">
+      <!-- =========================
+             INTRODUCCIÓN
+        ========================== -->
+      <section class="seccion-servicios">
+        <div class="encabezado-seccion">
+          <h1 class="titulo-seccion">Nuestros Servicios</h1>
+
+          <p class="descripcion-seccion">
+            Ponemos a tu disposición una amplia gama de servicios médicos y
+            asistenciales.
+          </p>
+        </div>
+
+        <!-- =========================
+                 TARJETAS DE SERVICIOS
+            ========================== -->
+        <div class="contenedor-servicios">
+          <!-- SERVICIO 1 -->
+          <article class="tarjeta-servicio">
+            <div class="icono-servicio">
+              <i class="fa-solid fa-kit-medical"></i>
+            </div>
+
+            <div class="informacion-servicio">
+              <h2 class="titulo-servicio">Urgencias 24/7</h2>
+
+              <p class="descripcion-servicio">
+                Atención inmediata las 24 horas del día, los 7 días de la
+                semana.
+              </p>
+            </div>
+          </article>
+
+          <!-- SERVICIO 2 -->
+          <article class="tarjeta-servicio">
+            <div class="icono-servicio">
+              <i class="fa-solid fa-bed"></i>
+            </div>
+
+            <div class="informacion-servicio">
+              <h2 class="titulo-servicio">Hospitalización</h2>
+
+              <p class="descripcion-servicio">
+                Habitaciones confortables y equipadas para tu recuperación.
+              </p>
+            </div>
+          </article>
+
+          <!-- SERVICIO 3 -->
+          <article class="tarjeta-servicio">
+            <div class="icono-servicio">
+              <i class="fa-solid fa-flask"></i>
+            </div>
+
+            <div class="informacion-servicio">
+              <h2 class="titulo-servicio">Laboratorio Clínico</h2>
+
+              <p class="descripcion-servicio">
+                Resultados confiables con tecnología de última generación.
+              </p>
+            </div>
+          </article>
+
+          <!-- SERVICIO 4 -->
+          <article class="tarjeta-servicio">
+            <div class="icono-servicio">
+              <i class="fa-solid fa-x-ray"></i>
+            </div>
+
+            <div class="informacion-servicio">
+              <h2 class="titulo-servicio">Imágenes Diagnósticas</h2>
+
+              <p class="descripcion-servicio">
+                Rayos X, ecografías, tomografías y resonancias magnéticas.
+              </p>
+            </div>
+          </article>
+
+          <!-- SERVICIO 5 -->
+          <article class="tarjeta-servicio">
+            <div class="icono-servicio">
+              <i class="fa-solid fa-user-doctor"></i>
+            </div>
+
+            <div class="informacion-servicio">
+              <h2 class="titulo-servicio">Cirugías</h2>
+
+              <p class="descripcion-servicio">
+                Quirófanos modernos y equipo especializado.
+              </p>
+            </div>
+          </article>
+
+          <!-- SERVICIO 6 -->
+          <article class="tarjeta-servicio">
+            <div class="icono-servicio">
+              <i class="fa-solid fa-truck-medical"></i>
+            </div>
+
+            <div class="informacion-servicio">
+              <h2 class="titulo-servicio">Ambulancias</h2>
+
+              <p class="descripcion-servicio">
+                Servicio de ambulancia equipado para traslados seguros.
+              </p>
+            </div>
+          </article>
+
+          <!-- SERVICIO 7 -->
+          <article class="tarjeta-servicio">
+            <div class="icono-servicio">
+              <i class="fa-solid fa-prescription-bottle-medical"></i>
+            </div>
+
+            <div class="informacion-servicio">
+              <h2 class="titulo-servicio">Farmacia</h2>
+
+              <p class="descripcion-servicio">
+                Medicamentos de calidad y atención farmacéutica.
+              </p>
+            </div>
+          </article>
+
+          <!-- SERVICIO 8 -->
+          <article class="tarjeta-servicio">
+            <div class="icono-servicio">
+              <i class="fa-solid fa-person-walking"></i>
+            </div>
+
+            <div class="informacion-servicio">
+              <h2 class="titulo-servicio">Rehabilitación</h2>
+
+              <p class="descripcion-servicio">
+                Terapias físicas y de rehabilitación personalizadas.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+<!-- Pie de página -->
+<footer class="pie-pagina">
+  <div class="pie-superior">
+
+    <div class="columna">
+      <div class="marca">
+        <img src="../IMAGENES/551dfb3f-2660-4a41-b8b0-734d47544f52.png" alt="Logo Hospital Vida">
+      </div>
+      <p>Brindamos atención médica de calidad con calidez humana y tecnología avanzada, cuidando de ti y tu familia todos los días del año.</p>
+      <div class="redes-sociales">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">📷</a>
+        <a href="#" aria-label="Twitter/X">✕</a>
+      </div>
+    </div>
+
+    <div class="columna">
+      <h4>Enlaces rápidos</h4>
+      <ul class="enlaces-pie">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="Especialidades.html">Especialidades</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="medicos.html">Médicos</a></li>
+        <li><a href="AgendarCita.html" class="activo">Citas</a></li>
+        <li><a href="resultados.html">Resultados</a></li>
+        <li><a href="contacto.html" >Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="columna">
+      <h4>Especialidades</h4>
+      <ul class="enlaces-pie">
+        <li><a href="#">Cardiología</a></li>
+        <li><a href="#">Pediatría</a></li>
+        <li><a href="#">Ginecología</a></li>
+        <li><a href="#">Traumatología</a></li>
+        <li><a href="#">Neurología</a></li>
+      </ul>
+    </div>
+
+    <div class="columna">
+      <h4>Contacto</h4>
+      <ul class="contacto">
+        <li>
+          <span>📍</span>
+          <span>Av. Principal 123, Bogotá, Colombia</span>
+        </li>
+        <li>
+          <span>📞</span>
+          <span><strong>Urgencias 24/7</strong>(+57) 601 234 5678</span>
+        </li>
+        <li>
+          <span>✉️</span>
+          <span>contacto@hospitalvida.com</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="pie-inferior">
+    <div class="pie-inferior-contenedor">
+      <p>© <span id="anioActual"></span> Hospital Vida. Todos los derechos reservados.</p>
+      <ul class="enlaces-legales">
+        <li><a href="#">Aviso de privacidad</a></li>
+        <li><a href="#">Términos de uso</a></li>
+        <li><a href="#">Mapa del sitio</a></li>
+      </ul>
+    </div>
+  </div>
+
+</footer>
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+    <script src="../JAVA/script.js"></script>
+  </body>
+</html>

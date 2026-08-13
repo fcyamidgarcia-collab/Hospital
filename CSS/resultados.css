@@ -1,0 +1,40 @@
+/* --- Estilos para el Panel de Resultados (Sesión Iniciada) --- */
+
+.cabecera-panel {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 1px solid var(--borde-tarjeta); 
+    padding-bottom: 24px; 
+    margin-bottom: 24px;
+}
+
+.contenedor-tabla {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.tabla-resultados {
+    width: 100%; 
+    border-collapse: collapse; 
+    text-align: left;
+}
+
+.tabla-resultados th {
+    padding: 14px 12px; 
+    font-size: 14px;
+    background-color: var(--azul-claro); 
+    color: var(--azul-marino); 
+    border-bottom: 2px solid var(--azul-primario);
+}
+
+.tabla-resultados td {
+    padding: 16px 12px; 
+    font-size: 14.5px; 
+    color: var(--tinta);
+    border-bottom: 1px solid var(--linea);
+}
+
+.tabla-resultados tr:hover td {
+    background-color: #f8fafc;
+}

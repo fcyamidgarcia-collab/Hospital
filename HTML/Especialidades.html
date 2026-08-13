@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Vida — Especialidades</title>
+    <link rel="stylesheet" href="../CSS/Especialidades.css" />
+  </head>
+  <body>
+    <!-- Mi Navbar uwu -->
+    <header class="barra-navegacion">
+      <div class="marca">
+        <img src="../IMAGENES/551dfb3f-2660-4a41-b8b0-734d47544f52.png" alt="Logo Hospital Vida" />
+      </div>
+
+      <ul class="enlaces-menu" id="enlacesMenu">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="Especialidades.html" class="activo">Especialidades</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="medicos.html">Médicos</a></li>
+        <li><a href="AgendarCita.html">Citas</a></li>
+        <li><a href="resultados.html">Resultados</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <div class="acciones">
+        <button class="boton-urgencias" onclick="window.location.href='sesion.html'">Iniciar sesion</button>
+        <button class="menu-hamburguesa" id="menuHamburguesa" onclick="mostrarMenu()" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- aqui empieza el body uwu -->
+    <section class="seccion-especialidades">
+      <div class="contenedor-especialidades">
+        <div class="encabezado-seccion">
+          <h1>Especialidades Médicas</h1>
+          <p>Contamos con un amplio portafolio de especialidades para cuidar de tu salud.</p>
+        </div>
+
+        <div class="grilla-especialidades">
+
+          <div class="tarjeta-especialidad">
+            <div class="icono-especialidad">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--azul)" stroke-width="2">
+                <path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/>
+              </svg>
+            </div>
+            <h3>Cardiología</h3>
+            <p>Diagnóstico y tratamiento de enfermedades del corazón.</p>
+            <p class="texto-extra">Realizamos electrocardiogramas, ecocardiogramas, pruebas de esfuerzo y seguimiento de pacientes con enfermedades cardiovasculares.</p>
+            <a href="javascript:void(0)" class="enlace-ver-mas">Ver más</a>
+          </div>
+
+          <div class="tarjeta-especialidad">
+            <div class="icono-especialidad">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--azul)" stroke-width="2">
+                <circle cx="12" cy="8" r="4"/>
+                <path d="M6 21c0-3.3 2.7-6 6-6s6 2.7 6 6"/>
+              </svg>
+            </div>
+            <h3>Pediatría</h3>
+            <p>Atención médica integral para niños y adolescentes.</p>
+            <p class="texto-extra">Consultas de crecimiento y desarrollo, vacunación, control de enfermedades comunes en la infancia y adolescencia.</p>
+            <a href="javascript:void(0)" class="enlace-ver-mas">Ver más</a>
+          </div>
+
+          <div class="tarjeta-especialidad">
+            <div class="icono-especialidad">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--azul)" stroke-width="2">
+                <path d="M12 3v6"/>
+                <circle cx="12" cy="13" r="6"/>
+                <path d="M9 20h6"/>
+              </svg>
+            </div>
+            <h3>Ginecología</h3>
+            <p>Cuidado de la salud femenina.</p>
+            <p class="texto-extra">Control ginecológico anual, planificación familiar, seguimiento del embarazo y salud reproductiva.</p>
+            <a href="javascript:void(0)" class="enlace-ver-mas">Ver más</a>
+          </div>
+
+          <div class="tarjeta-especialidad">
+            <div class="icono-especialidad">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--azul)" stroke-width="2">
+                <path d="M6 3v6l-3 3 3 3v6"/>
+                <path d="M18 3v18"/>
+              </svg>
+            </div>
+            <h3>Traumatología</h3>
+            <p>Tratamiento de lesiones y enfermedades del sistema musculoesquelético.</p>
+            <p class="texto-extra">Manejo de fracturas, lesiones deportivas, dolor articular y rehabilitación post-quirúrgica.</p>
+            <a href="javascript:void(0)" class="enlace-ver-mas">Ver más</a>
+          </div>
+
+          <div class="tarjeta-especialidad">
+            <div class="icono-especialidad">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--azul)" stroke-width="2">
+                <path d="M9 3a3 3 0 013 3v1a3 3 0 013-3 3 3 0 013 3c0 4-3 5-3 8a3 3 0 01-6 0c0-3-3-4-3-8a3 3 0 013-3z"/>
+              </svg>
+            </div>
+            <h3>Neurología</h3>
+            <p>Diagnóstico y tratamiento del sistema nervioso.</p>
+            <p class="texto-extra">Evaluación de migrañas, epilepsia, trastornos del sueño y enfermedades neurodegenerativas.</p>
+            <a href="javascript:void(0)" class="enlace-ver-mas">Ver más</a>
+          </div>
+
+          <div class="tarjeta-especialidad">
+            <div class="icono-especialidad">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--azul)" stroke-width="2">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 8v4l3 3"/>
+              </svg>
+            </div>
+            <h3>Dermatología</h3>
+            <p>Cuidado de la piel, cabello y uñas.</p>
+            <p class="texto-extra">Tratamiento de acné, manchas, alergias en la piel y revisión de lunares.</p>
+            <a href="javascript:void(0)" class="enlace-ver-mas">Ver más</a>
+          </div>
+
+          <div class="tarjeta-especialidad">
+            <div class="icono-especialidad">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--azul)" stroke-width="2">
+                <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </div>
+            <h3>Oftalmología</h3>
+            <p>Diagnóstico y tratamiento de enfermedades visuales.</p>
+            <p class="texto-extra">Exámenes visuales, tratamiento de cataratas, glaucoma y adaptación de lentes.</p>
+            <a href="javascript:void(0)" class="enlace-ver-mas">Ver más</a>
+          </div>
+
+          <div class="tarjeta-especialidad">
+            <div class="icono-especialidad">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--azul)" stroke-width="2">
+                <path d="M12 2a5 5 0 015 5c0 2-1 3-2 4l-3 3-3-3c-1-1-2-2-2-4a5 5 0 015-5z"/>
+                <path d="M8 21h8M10 17v4M14 17v4"/>
+              </svg>
+            </div>
+            <h3>Oncología</h3>
+            <p>Tratamiento integral del cáncer y apoyo al paciente oncológico.</p>
+            <p class="texto-extra">Diagnóstico temprano, quimioterapia, radioterapia y acompañamiento integral durante el tratamiento.</p>
+            <a href="javascript:void(0)" class="enlace-ver-mas">Ver más</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- aqui mi pie de pagina uwu -->
+    <footer class="pie-pagina">
+      <div class="pie-superior">
+        <div class="columna">
+          <div class="marca">
+            <img src="../IMAGENES/551dfb3f-2660-4a41-b8b0-734d47544f52.png" alt="Logo Hospital Vida" />
+          </div>
+          <p>Brindamos atención médica de calidad con calidez humana y tecnología avanzada, cuidando de ti y tu familia todos los días del año.</p>
+          <div class="redes-sociales">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Twitter/X">✕</a>
+          </div>
+        </div>
+
+        <div class="columna">
+          <h4>Enlaces rápidos</h4>
+          <ul class="enlaces-pie">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="Especialidades.html" class="activo">Especialidades</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="medicos.html">Médicos</a></li>
+        <li><a href="AgendarCita.html">Citas</a></li>
+        <li><a href="resultados.html">Resultados</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="columna">
+          <h4>Especialidades</h4>
+          <ul class="enlaces-pie">
+            <li><a href="#">Cardiología</a></li>
+            <li><a href="#">Pediatría</a></li>
+            <li><a href="#">Ginecología</a></li>
+            <li><a href="#">Traumatología</a></li>
+            <li><a href="#">Neurología</a></li>
+          </ul>
+        </div>
+
+        <div class="columna">
+          <h4>Contacto</h4>
+          <ul class="contacto">
+            <li>
+              <span>📍</span>
+              <span>Av. Principal 123, Bogotá, Colombia</span>
+            </li>
+            <li>
+              <span>📞</span>
+              <span><strong>Urgencias 24/7</strong>(+57) 601 234 5678</span>
+            </li>
+            <li>
+              <span>✉️</span>
+              <span>contacto@hospitalvida.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pie-inferior">
+        <div class="pie-inferior-contenedor">
+          <p>© <span id="anioActual"></span> Hospital Vida. Todos los derechos reservados.</p>
+          <ul class="enlaces-legales">
+            <li><a href="#">Aviso de privacidad</a></li>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Mapa del sitio</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../JAVA/especialidades.js"></script>
+  </body>
+</html>

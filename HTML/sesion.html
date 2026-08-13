@@ -1,0 +1,72 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-thin-straight/css/uicons-thin-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+
+    <link rel="stylesheet" href="../CSS/estilo.css">
+    <link rel="stylesheet"href="olvidosucontrasena.css">
+
+    <title>INICIO SESION</title> 
+</head>
+<body>
+<!--INICIO SESION-->
+    <div class="sesion_container">
+
+        <!--ICONO-->
+        <i class="fi fi-rr-user-add"></i>
+        <h1>Iniciar Sesión</h1>
+        <h2>Ingresa tus credenciales para acceder</h2>
+        
+        <form id="iniciarsesion">
+            <div class="inicio_sesion">
+                <label for="ingresar">Correo Electrónico:</label>
+                <input type="email" id="Ingresarcorreo">
+                <i class="fi fi-rr-envelope"></i>
+            </div>
+
+            <div class="inicio_sesion">
+                <label for="ingresarcontraseña">Contraseña:</label>
+                <input type="password" id="Ingresarcontraseña" required>
+                <i class="fi fi-rs-eye" id="tooglecontraseña"></i>
+            </div>
+
+              <!--CONTRASEÑA-->
+            <div class="recordar_contraseña">
+                <label>
+                    <input type="checkbox" id="recordar">Recordarmela
+                </label>
+                <a href="recuperar.html">Olvide mi contraseña</a>
+            </div>
+
+            <!--INICIAR SESION BOTON-->
+            <button type="submit"  class="iniciar-btn">
+                Iniciar Sesión
+            </button>
+
+                <!--REGISTRAR-->
+            <div class="registrar">
+                <p>No tengo cuenta <a href="registrar.html" id="registrar">Registrar</a></p>
+            </div>
+            <button type="button" class="volver-btn" onclick="window.location.href='inicio.html'">
+                Volver
+            </button>
+        </form>
+    </div>
+<script src="../JAVA/script1.js"></script>
+    
+</body>
+</html>
