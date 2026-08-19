@@ -3,7 +3,6 @@
   --azul: #1755a6;
   --azul-claro: #d9e3ed;
   --rojo: #d92525;
-  --verde: #2ea043;
   --gris-claro: #f2f2f2;
   --texto: #3c4a5e;
   --texto-suave: #8a97a8;
@@ -157,193 +156,86 @@ body {
   color: var(--texto-suave);
 }
 
-/* ===================== AGENDAR CITA ===================== */
-.seccion-agendar-cita {
+/* ===================== ESPECIALIDADES ===================== */
+.seccion-especialidades {
   padding: 56px 20px;
 }
-.contenedor-agendar {
-  max-width: 760px;
+.contenedor-especialidades {
+  max-width: 1100px;
   margin: 0 auto;
-  background: var(--blanco);
-  border-radius: 16px;
-  padding: 36px;
-  box-shadow: 0 4px 20px rgba(15, 55, 89, 0.06);
 }
 
-.pasos-progreso {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  margin-bottom: 32px;
+.contenedor-especialidades .encabezado-seccion h1 {
+  font-size: 28px;
 }
-.paso {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  min-width: 70px;
-}
-.circulo-paso {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--gris-claro);
-  color: var(--texto-suave);
-  border: 2px solid var(--borde);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  font-weight: 700;
-  transition:
-    background 0.25s ease,
-    border-color 0.25s ease,
-    color 0.25s ease;
+.contenedor-especialidades .encabezado-seccion p {
+  max-width: 480px;
+  margin: 0 auto;
 }
 
-/* Número vs. check dentro del círculo, controlado por JS via clases del .paso */
-.icono-check {
-  display: none;
-}
-.numero-paso {
-  display: block;
-}
-
-.etiqueta-paso {
-  font-size: 12px;
-  color: var(--texto-suave);
-  font-weight: 500;
-  text-align: center;
-  transition: color 0.2s ease;
-}
-
-.paso.completado .circulo-paso {
-  background: var(--azul);
-  border-color: var(--azul);
-  color: #fff;
-}
-.paso.completado .numero-paso {
-  display: none;
-}
-.paso.completado .icono-check {
-  display: block;
-}
-.paso.completado .etiqueta-paso {
-  color: var(--azul);
-}
-
-.paso.activo .circulo-paso {
-  background: var(--azul);
-  border-color: var(--azul);
-  color: #fff;
-}
-.paso.activo .etiqueta-paso {
-  color: var(--azul);
-  font-weight: 700;
-}
-
-.linea-paso {
-  flex: 1;
-  height: 2px;
-  background: var(--borde);
-  margin-top: 17px;
-  transition: background 0.25s ease;
-}
-.linea-paso.completada {
-  background: var(--azul);
-}
-
-.formulario-cita {
-  margin-top: 8px;
-}
-.fila-formulario {
+.grilla-especialidades {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  margin-bottom: 20px;
-}
-.grupo-campo {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.grupo-campo label {
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--azul-oscuro);
-}
-.grupo-campo select,
-.grupo-campo input {
-  padding: 11px 14px;
-  border: 1px solid var(--borde);
-  border-radius: 10px;
-  font-size: 14px;
-  color: var(--texto);
-  background: var(--blanco);
-  font-family: inherit;
-  transition: border-color 0.2s ease;
-}
-.grupo-campo select:focus,
-.grupo-campo input:focus {
-  outline: none;
-  border-color: var(--azul);
 }
 
-/* Estados de validación por campo */
-.mensaje-error {
-  display: none;
-  font-size: 12px;
-  color: var(--rojo);
-  margin-top: -2px;
+@media (max-width: 900px) {
+  .grilla-especialidades {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-.grupo-campo.invalido select,
-.grupo-campo.invalido input {
-  border-color: var(--rojo);
-}
-.grupo-campo.invalido .mensaje-error {
-  display: block;
-}
-.grupo-campo.valido select,
-.grupo-campo.valido input {
-  border-color: var(--verde);
-}
-
 @media (max-width: 600px) {
-  .fila-formulario {
+  .grilla-especialidades {
     grid-template-columns: 1fr;
   }
 }
 
-.titulo-subseccion {
-  margin: 28px 0 16px;
-  padding-top: 20px;
-  border-top: 1px solid var(--borde);
-}
-.titulo-subseccion h3 {
-  font-size: 16px;
-  color: var(--azul-oscuro);
-}
-.campo-completo {
-  margin-bottom: 20px;
-}
-.boton-confirmar {
-  width: 100%;
-  background: var(--azul);
-  color: #fff;
-  border: none;
-  padding: 14px;
-  border-radius: 10px;
-  font-size: 15px;
-  font-weight: 700;
-  cursor: pointer;
-  margin-top: 8px;
+.tarjeta-especialidad {
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 28px 24px;
+  text-align: left;
   transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease;
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
-.boton-confirmar:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 20px rgba(23, 85, 166, 0.28);
+.tarjeta-especialidad:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(15, 55, 89, 0.08);
+}
+
+.icono-especialidad {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--azul-claro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.tarjeta-especialidad h3 {
+  font-size: 16.5px;
+  color: var(--azul-oscuro);
+  margin-bottom: 8px;
+}
+.tarjeta-especialidad p {
+  font-size: 13.5px;
+  color: var(--texto-suave);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.enlace-ver-mas {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--azul);
+  text-decoration: none;
+}
+.enlace-ver-mas:hover {
+  text-decoration: underline;
 }
 
 /* ===================== FOOTER ===================== */
