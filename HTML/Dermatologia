@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Vida — Dermatología</title>
+    <link rel="stylesheet" href="../CSS/EspecialidadSeparada.css" />
+  </head>
+  <body>
+    <header class="barra-navegacion">
+      <div class="marca">
+        <img src="../IMAGENES/551dfb3f-2660-4a41-b8b0-734d47544f52.png" alt="Logo Hospital Vida" />
+      </div>
+
+      <ul class="enlaces-menu" id="enlacesMenu">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="Especialidades.html" class="activo">Especialidades</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="medicos.html">Médicos</a></li>
+        <li><a href="AgendarCita.html">Citas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <div class="acciones">
+        <button class="boton-urgencias">Urgencias</button>
+        <button class="menu-hamburguesa" id="menuHamburguesa" onclick="mostrarMenu()" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <section class="seccion-detalle-especialidad">
+      <div class="contenedor-detalle">
+        <a href="Especialidades.html" class="enlace-volver">← Volver a Especialidades</a>
+
+        <div class="encabezado-detalle">
+          <div class="imagen-detalle">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--azul)" stroke-width="1.6">
+              <circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/>
+            </svg>
+          </div>
+          <h1>Dermatología</h1>
+          <p>Cuidado de la piel, cabello y uñas.</p>
+        </div>
+
+        <div class="tarjeta-detalle">
+          <h3>¿Qué hacemos?</h3>
+          <p>Tratamiento de acné, manchas, alergias en la piel y revisión de lunares.</p>
+          <a href="AgendarCita.html" class="boton-agendar">Agendar Cita</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="pie-pagina">
+      <div class="pie-superior">
+        <div class="columna">
+          <div class="marca">
+            <img src="../IMAGENES/551dfb3f-2660-4a41-b8b0-734d47544f52.png" alt="Logo Hospital Vida" />
+          </div>
+          <p>Brindamos atención médica de calidad con calidez humana y tecnología avanzada, cuidando de ti y tu familia todos los días del año.</p>
+          <div class="redes-sociales">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Twitter/X">✕</a>
+          </div>
+        </div>
+
+        <div class="columna">
+          <h4>Enlaces rápidos</h4>
+          <ul class="enlaces-pie">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="Especialidades.html">Especialidades</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="medicos.html">Médicos</a></li>
+        <li><a href="AgendarCita.html">Citas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="columna">
+          <h4>Especialidades</h4>
+          <ul class="enlaces-pie">
+            <li><a href="Cardiologia.html">Cardiología</a></li>
+            <li><a href="Pediatría.html">Pediatría</a></li>
+            <li><a href="Ginecologia.html">Ginecología</a></li>
+            <li><a href="Traumatologia.html">Traumatología</a></li>
+            <li><a href="Neurologia.html">Neurología</a></li>
+            <li><a href="Dermatologia.html">Dermatología</a></li>
+            <li><a href="Oftalmologia.html">Oftalmología</a></li>
+            <li><a href="Oncologia.html">Oncología</a></li>
+          </ul>
+        </div>
+
+        <div class="columna">
+          <h4>Contacto</h4>
+          <ul class="contacto">
+            <li>
+              <span>📍</span>
+              <span>Av. Principal 123, Bogotá, Colombia</span>
+            </li>
+            <li>
+              <span>📞</span>
+              <span><strong>Urgencias 24/7</strong>(+57) 601 234 5678</span>
+            </li>
+            <li>
+              <span>✉️</span>
+              <span>contacto@hospitalvida.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pie-inferior">
+        <div class="pie-inferior-contenedor">
+          <p>© <span id="anioActual"></span> Hospital Vida. Todos los derechos reservados.</p>
+          <ul class="enlaces-legales">
+            <li><a href="#">Aviso de privacidad</a></li>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Mapa del sitio</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../JAVA/EspecialidadSeparada.js"></script>
+  </body>
+</html>
