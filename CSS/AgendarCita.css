@@ -86,18 +86,24 @@ body {
   align-items: center;
   gap: 14px;
 }
-.boton-urgencias{
-  background:var(--azul);
-  color:#fff;
-  border:none;
-  padding:10px 22px;
-  border-radius:22px;
-  font-size:14px;
-  font-weight:700;
-  cursor:pointer;
-  transition:transform .15s ease, box-shadow .15s ease;
+.boton-urgencias {
+  background: var(--rojo);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 22px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(217, 37, 37, 0.28);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
-.boton-urgencias:hover{ transform:translateY(-1px); box-shadow:0 8px 20px rgba(30,79,163,.36); }
+.boton-urgencias:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(217, 37, 37, 0.36);
+}
 
 .menu-hamburguesa {
   display: none;
