@@ -11,7 +11,11 @@
     <!-- BARRA DE NAVEGACIÓN  -->
     <nav class="barra-navegacion">
       <div class="marca">
-        <img src="../IMAGENES/logo1.png" alt="Logo del Hospital Vida" class="logo" />
+        <img
+          src="../IMAGENES/logo1.png"
+          alt="Logo del Hospital Vida"
+          class="logo"
+        />
       </div>
 
       <ul class="enlaces-menu" id="enlacesMenu">
@@ -21,12 +25,11 @@
         <li><a href="servicios.html">Servicios</a></li>
         <li><a href="medicos.html">Médicos</a></li>
         <li><a href="AgendarCita.html">Citas</a></li>
-        <li><a href="resultados.html">Resultados</a></li>
         <li><a href="contacto.html" class="activo">Contacto</a></li>
       </ul>
 
       <div class="acciones">
-        <button class="boton-urgencias" onclick="window.location.href='sesion.html'">Iniciar sesion</button>
+        <button class="boton-urgencias">Urgencias</button>
         <button
           class="menu-hamburguesa"
           id="menuHamburguesa"
@@ -50,47 +53,49 @@
           <div class="contenido-contacto">
             <!-- INFORMACIÓN -->
             <div class="informacion-contacto">
-              <div class="dato-contacto">
-                <div class="icono-contacto">📍</div>
-                <div>
-                  <h3>Dirección</h3>
-                  <p>
-                    Calle 123 #45-67<br />
-                    Ciudad, País
-                  </p>
+              <div class="datos-contacto">
+                <div class="dato-contacto">
+                  <div class="icono-contacto">📍</div>
+                  <div>
+                    <h3>Dirección</h3>
+                    <p>
+                      Calle 123 #45-67<br />
+                      Ciudad, País
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              <div class="dato-contacto">
-                <div class="icono-contacto">☎</div>
-                <div>
-                  <h3>Teléfono</h3>
-                  <p>
-                    (601) 123 4567<br />
-                    300 123 4567
-                  </p>
+                <div class="dato-contacto">
+                  <div class="icono-contacto">☎</div>
+                  <div>
+                    <h3>Teléfono</h3>
+                    <p>
+                      (601) 123 4567<br />
+                      300 123 4567
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              <div class="dato-contacto">
-                <div class="icono-contacto">✉</div>
-                <div>
-                  <h3>Correo electrónico</h3>
-                  <p>contacto@hospitalvida.com</p>
+                <div class="dato-contacto">
+                  <div class="icono-contacto">✉</div>
+                  <div>
+                    <h3>Correo electrónico</h3>
+                    <p>contacto@hospitalvida.com</p>
+                  </div>
                 </div>
-              </div>
 
-              <div class="dato-contacto">
-                <div class="icono-contacto">◷</div>
-                <div>
-                  <h3>Horario de atención</h3>
-                  <p>
-                    Consultas externas:<br />
-                    Lun - Vie · 7:00 AM - 5:00 PM
-                  </p>
-                  <p>
-                    <strong>Urgencias: 24 horas</strong>
-                  </p>
+                <div class="dato-contacto">
+                  <div class="icono-contacto">◷</div>
+                  <div>
+                    <h3>Horario de atención</h3>
+                    <p>
+                      Consultas externas:<br />
+                      Lun - Vie · 7:00 AM - 5:00 PM
+                    </p>
+                    <p>
+                      <strong>Urgencias: 24 horas</strong>
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -115,6 +120,7 @@
                     id="nombre"
                     name="nombre"
                     placeholder="Nombre completo"
+                    maxlength="40"
                     required
                   />
                 </div>
@@ -126,6 +132,7 @@
                     id="correo"
                     name="correo"
                     placeholder="Correo electrónico"
+                    maxlength="100"
                     required
                   />
                 </div>
@@ -137,6 +144,7 @@
                     id="telefono"
                     name="telefono"
                     placeholder="Teléfono"
+                    maxlength="10"
                     required
                   />
                 </div>
@@ -148,6 +156,7 @@
                     name="mensaje"
                     rows="6"
                     placeholder="Escribe tu mensaje"
+                    maxlength="500"
                     required
                   ></textarea>
                 </div>
@@ -167,7 +176,11 @@
       <div class="pie-superior">
         <div class="columna">
           <div class="marca">
-            <img src="../IMAGENES/logo1.png" alt="Logo del Hospital Vida" class="logo" />
+            <img
+              src="../IMAGENES/logo1.png"
+              alt="Logo del Hospital Vida"
+              class="logo"
+            />
           </div>
           <p>
             Brindamos atención médica de calidad con calidez humana y tecnología
@@ -183,13 +196,13 @@
         <div class="columna">
           <h4>Enlaces rápidos</h4>
           <ul class="enlaces-pie">
-        <li><a href="inicio.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="Especialidades.html">Especialidades</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="medicos.html">Médicos</a></li>
-        <li><a href="AgendarCita.html" class="activo">Citas</a></li>
-        <li><a href="contacto.html" class="activo">Contacto</a></li>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="Especialidades.html">Especialidades</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="medicos.html">Médicos</a></li>
+            <li><a href="AgendarCita.html" class="activo">Citas</a></li>
+            <li><a href="contacto.html" class="activo">Contacto</a></li>
           </ul>
         </div>
 
